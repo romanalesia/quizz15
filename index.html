@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz C/C++ - Structuri Alternative</title>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --bg-color: #f4f7f6;
+            --text-color: #333;
+            --correct-color: #27ae60;
+            --incorrect-color: #c0392b;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        .section-header {
+            background: var(--primary-color);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .question-container {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .question {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 12px;
+        }
+
+        .options label {
+            display: block;
+            margin-bottom: 8px;
+            padding: 10px;
+            background: #f9f9f9;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .options label:hover {
+            background: #e1e7eb;
+        }
+
+        .options input {
+            margin-right: 10px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2em;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        button:hover {
+            background-color: #2980b9;
+        }
+
+        #result {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+
+        .correct {
+            color: var(--correct-color);
+        }
+
+        .incorrect {
+            color: var(--incorrect-color);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="section-header">
+            <h2>Tema Centrală: Programare în C/C++</h2>
+            <p>Subtema: Instrucțiuni Alternative și Conditional-Repetitive</p>
+        </div>
+        
+        <h1>Quiz: Structuri Alternative</h1>
+        
+        <form id="quizForm">
+            <!-- Întrebarea 1 -->
+            <div class="question-container">
+                <div class="question">1. Care dintre instrucțiunile de mai jos este o instrucțiune alternativă multiplă în C/C++?</div>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> a) if-else</label>
+                    <label><input type="radio" name="q1" value="b"> b) switch</label>
+                    <label><input type="radio" name="q1" value="c"> c) while</label>
+                </div>
+            </div>
+
+            <!-- Întrebarea 2 -->
+            <div class="question-container">
+                <div class="question">2. Ce tip de date pot evalua expresiile dintr-o instrucțiune 'switch' conform standardelor C++?</div>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> a) Doar tipuri întregi sau caracter (int, char, etc.)</label>
+                    <label><input type="radio" name="q2" value="b"> b) Orice tip de date, inclusiv float și string</label>
+                    <label><input type="radio" name="q2" value="c"> c) Doar tipuri booleene (true/false)</label>
+                </div>
+            </div>
+
+            <!-- Întrebarea 3 -->
+            <div class="question-container">
+                <div class="question">3. Ce rol are cuvântul cheie 'break' într-o instrucțiune 'switch'?</div>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> a) Oprește execuția întregului program</label>
+                    <label><input type="radio" name="q3" value="b"> b) Săritura necondiționată la linia de început</label>
+                    <label><input type="radio" name="q3" value="c"> c) Oprește executarea instrucțiunilor pentru cazul curent și iese din 'switch'</label>
+                </div>
+            </div>
+
+            <!-- Întrebarea 4 -->
+            <div class="question-container">
+                <div class="question">4. Care este sintaxa corectă pentru operatorul condițional (ternar) în C/C++?</div>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a"> a) conditie ? expresie1 : expresie2</label>
+                    <label><input type="radio" name="q4" value="b"> b) conditie ? expresie1 ; expresie2</label>
+                    <label><input type="radio" name="q4" value="c"> c) conditie if expresie1 else expresie2</label>
+                </div>
+            </div>
+
+            <!-- Întrebarea 5 -->
+            <div class="question-container">
+                <div class="question">5. Ce se întâmplă dacă într-un 'if (x = 0)' expresia este evaluată, presupunând că x este o variabilă de tip int?</div>
+                <div class="options">
+                    <label><input type="radio" name="q5" value="a"> a) Se execută ramura 'else' sau instrucțiunea următoare</label>
+                    <label><input type="radio" name="q5" value="b"> b) Se generează o eroare de compilare</label>
+                    <label><input type="radio" name="q5" value="c"> c) Se execută ramura 'if'</label>
+                </div>
+            </div>
+
+            <button type="button" onclick="verificaQuiz()">Verifică Rezultatele</button>
+        </form>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function verificaQuiz() {
+            // Răspunsurile corecte pentru fiecare întrebare
+            const raspunsuriCorecte = {
+                q1: 'b',
+                q2: 'a',
+                q3: 'c',
+                q4: 'a',
+                q5: 'a'
+            };
+
+            let scor = 0;
+            const totalIntrebari = 5;
+            let formulareCompletata = true;
+
+            // Verificăm fiecare întrebare
+            for (let i = 1; i <= totalIntrebari; i++) {
+                const numeRadiouri = 'q' + i;
+                const selectat = document.querySelector(`input[name="${numeRadiouri}"]:checked`);
+                
+                if (!selectat) {
+                    formulareCompletata = false;
+                    break;
+                }
+
+                if (selectat.value === raspunsuriCorecte[numeRadiouri]) {
+                    scor++;
+                }
+            }
+
+            // Afișăm rezultatul
+            const rezultatDiv = document.getElementById('result');
+            if (!formulareCompletata) {
+                rezultatDiv.textContent = "Te rugăm să răspunzi la toate întrebările înainte de a verifica!";
+                rezultatDiv.className = "incorrect";
+            } else {
+                rezultatDiv.innerHTML = `Ai obținut ${scor} din ${totalIntrebari} puncte!`;
+                rezultatDiv.className = scor === totalIntrebari ? "correct" : "incorrect";
+            }
+        }
+    </script>
+</body>
+</html>
